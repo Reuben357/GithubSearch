@@ -1,0 +1,43 @@
+<div class="row" id="landingPageSection">
+
+  <div class=" col-lg-6 col-md-7 offset-md-3">
+
+    <span class="anchor"></span>
+
+    <div class="card card-outline-secondary card-bg">
+
+      <div class="card-header">
+        <h4 class="mb-0">Your Github Repositories</h4>
+      </div>
+
+      <div class="card-body">
+
+        <form [formGroup]="githubUsernameForm" novalidate>
+
+          <div class="form-group">
+            <label>Username</label>
+            <input class="form-control" formControlName="githubUsername" type="text" #githubUsername>
+          </div>
+
+          <div class="alert alert-custom" *ngIf="githubUsernameForm.controls['githubUsername'].invalid &&
+                (githubUsernameForm.controls['githubUsername'].dirty ||
+                githubUsernameForm.controls['githubUsername'].touched)">
+
+            <div *ngIf="githubUsernameForm.controls['githubUsername'].errors.required">
+              GitHub username is required.
+            </div>
+
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-custom-yellow btn-md  mt-2" type="submit" [disabled]="githubUsernameForm.pristine ||
+                      githubUsernameForm.invalid" (click)="getGithubUser(githubUsername.value)">Ignite</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</div>
