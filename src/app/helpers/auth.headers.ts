@@ -1,3 +1,4 @@
 import { environment } from "../../environments/environment";
 
-export const authHeader: string = 'token ' + environment.ouath_token;
+
+export const authHeader: string = 'token ' + environment.oauth_token;
