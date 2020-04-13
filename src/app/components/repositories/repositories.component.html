@@ -1,0 +1,93 @@
+<div class="row" style="padding-top: 68px;  padding-bottom: 50px;" ng>
+  <div class="col-12">
+    <div class="card card-bg">
+      <div class="card-body">
+        <div class="card-title mb-4">
+          <div class="d-flex justify-content-start">
+            <div class="image-container">
+              <img alt="GitHub User's Avatar" class="img-thumbnail" id="img-avatar" src="{{githubUserInfo.avatar_url}}">
+            </div>
+
+
+            <div class="userData ml-3">
+              <h2 class="d-block" id="user-name">
+                {{githubUserInfo.login}}
+              </h2>
+
+
+              <h6 class="d-block">{{repositoryCount}} repositories</h6>
+
+
+              <h6 class="d-block">{{followerCount}} followers</h6>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-12">
+            <ul class="nav nav-tabs" id="repositoriesTab" role="tablist">
+
+              <li class="nav-item mr-2">
+                <button aria-controls="user-repositories" aria-selected="true" class="nav-link active btn-custom-yellow"
+                  data-toggle="tab" href="#user-repositories" id="user-repositories-tab"
+                  role="tab">Repositories</button>
+              </li>
+
+
+              <li class="nav-item">
+                <button aria-controls="user-followers" aria-selected="false" class="nav-link btn-custom-yellow"
+                  data-toggle="tab" href="#user-followers" id="user-followers-tab" role="tab">Followers</button>
+              </li>
+
+            </ul>
+
+
+            <div class="tab-content ml-1" id="repositories-tab-content">
+
+              <div aria-labelledby="user-repositories-tab" class="tab-pane fade show active" id="user-repositories"
+                role="tabpanel">
+                <table class="table" id="user-repositories-table">
+                  <tbody>
+                    <tr *ngFor="let userRepository of userRepositories">
+                      <td>
+                        <h4 class="font-weight-bold">{{userRepository.full_name}}</h4>
+                        <div class="mt-2 mb-2">
+                          {{userRepository.description}}
+                        </div>
+                        <a class="mb-2" href="{{userRepository.html_url}}" target="_blank">Access repository</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+
+              <div aria-labelledby="user-followers" class="tab-pane fade" id="user-followers" role="tabpanel">
+                <table class="table" id="use-followers-table">
+                  <tbody>
+                    <tr *ngFor="let userFollower of userFollowers">
+                      <td>
+                        <div class="row">
+                          <div class="col-3">
+                            <img alt="A user's follower avatar" class="img-fluid img-thumbnail"
+                              src="{{userFollower.avatar_url}}">
+                          </div>
+                          <div class="col-4">
+                            <h4 class="font-weight-bold">{{userFollower.login}}</h4>
+                            <a class="mb-2" href="{{userFollower.html_url}}" target="_blank">Access Follower</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
