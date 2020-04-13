@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/ng2-slim-loading-bar/style.css";
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-Regular.eot');
+    src: url('assets/fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Poppins-Regular.woff2') format('woff2'),
+    url('assets/fonts/Poppins-Regular.woff') format('woff'),
+    url('assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+html, body {
+    background-color: #abd1c6 !important;
+    font-family: 'Poppins', sans-serif !important;
+  }
+  
+  .card-bg {
+    background-color: #004643 !important;
+  }
+  
+  .card-header {
+    color: #fffffe !important;
+  }
+  
+  .card-body {
+    color: #abd1c6 !important;
+  }
+  
+  .btn-custom-yellow {
+    background-color: #f9bc60 !important;
+    color: #001e1d !important;
+  }
+  
+  table {
+    color: #abd1c6 !important;
+  }
+  
+  table a {
+    color: #f9bc60;
+  }
+  
+  table a:hover {
+    text-decoration: none !important;
+    color: #001e1d;
+  }
