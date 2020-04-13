@@ -21,8 +21,18 @@ export class RepositoriesComponent implements OnInit {
   constructor(private repositoriesService: RepositoriesService) { }
 
   ngOnInit(): void {
-    
-    
+    this.githubUserInfo = JSON.parse(this.repositoriesService.getGithubUserInfo());
+
+    this.repositoriesService.getUserRepositories(this.githubUserInfo.repos_url).subscribe((data: RepositoryModel[])  => {
+      this.userRepositories = data;
+      this.repositoryCount = this.userRepositories.length || 0;
+    });
+
+    this.repositoriesService.getUserFollowers(this.githubUserInfo.followers_url).subscribe((data: UserModel[] )=> {
+      this.userFollowers = data;
+      this.followerCount =this.userFollowers.length || 0;
+    })
+  }
   
 
 }
