@@ -35,8 +35,58 @@
   .image-container:hover .image {
     opacity: 0.3;
   }
-  
+  .img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+img {
+  vertical-align: middle;
+}
   .image-container:hover .middle {
     opacity: 1;
   }
-  
+  .card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+  }
+  .justify-content-start{
+    justify-content: flex-start!important;
+  }
+  .d-flex{
+    display: flex;
+  }
+  .nav-tabs{
+    border-bottom: 1px solid #dee2e6;
+  }
+  .mr-2, .mx-2 {
+    margin-right: .5rem!important;
+}
+.ml-3, .mx-3 {
+  margin-left: 1rem!important;
+}
+  .nav{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  .nav-link {
+    display: block;
+    padding: .5rem 1rem;
+}
+.nav-tabs .nav-link {
+  border: 1px solid transparent;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+  .table{
+    width: 100%;
+    margin-bottom: 2rem;
+  }

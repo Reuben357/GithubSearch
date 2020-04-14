@@ -4,4 +4,19 @@ html, body {
   nav{
     text-decoration: none;
   }
-  
+  .bg-light{
+    background-color: #f8f9fa!important;
+  }
+ 
+  .navbar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+  }
+  .navbar-nav {
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }

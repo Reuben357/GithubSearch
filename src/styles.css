@@ -16,17 +16,24 @@ html, body {
     background-color: #abd1c6 !important;
     font-family: 'Poppins', sans-serif !important;
   }
-  
+  .card {
+    position: relative;
+    flex-direction: column;
+    border-radius: 0.25rem;
+    word-wrap: break-word;
+}
   .card-bg {
     background-color: #004643 !important;
   }
   
   .card-header {
     color: #fffffe !important;
+    padding: 0.5rem 2.25rem;
   }
   
   .card-body {
     color: #abd1c6 !important;
+    padding: 2.25rem;
   }
   
   .btn-custom-yellow {
